@@ -57,11 +57,14 @@ public class Practise01 {
 
         @Override
         public void run() {
-            System.out.println(Thread.currentThread().getName() + " " + "输入Q结束线程1");
-            Scanner scanner = new Scanner(System.in);
-            String next = scanner.next();
-            if ("Q".equals(next)) {
-                thread01.setLoop(false);
+            while (true) {
+                System.out.println(Thread.currentThread().getName() + " " + "输入Q结束线程1");
+                Scanner scanner = new Scanner(System.in);
+                String next = scanner.next();
+                if ("Q".equals(next)) {
+                    thread01.setLoop(false);
+                    break;
+                }
             }
         }
     }
